@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".CategoryResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RaceResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".FinishTimerActivity"
             android:exported="false" />
         <activity
@@ -27,7 +33,13 @@
             android:exported="true" />
         <activity
             android:name=".RaceActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".AddVehicleActivity"
             android:exported="true" />
@@ -37,11 +49,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -11,4 +11,6 @@ interface CarreraApiService {
     fun createCarrera(@Body carrera: Race): Call<Race>
     @GET("carrera/{id}")
     fun getCarreraById(@Path("id") carreraId: String): Call<Race>
+    @GET("carrera/")
+    fun getAllCarreras(): Call<List<Race>>
 }

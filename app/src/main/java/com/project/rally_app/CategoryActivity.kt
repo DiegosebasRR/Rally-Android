@@ -36,7 +36,7 @@ class CategoryActivity : AppCompatActivity() {
             val categoryNameEditText = findViewById<EditText>(R.id.editTextCategory)
             val nombre = categoryNameEditText.text.toString()
 
-            val category = Category(nombre, carrera, vehiculo) // Assuming 'carrera' is already initialized
+            val category = Category(nombre, carrera, vehiculo)
 
             // Llamar al método para crear la categoría utilizando la API
             createCategory(category)

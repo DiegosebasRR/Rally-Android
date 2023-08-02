@@ -25,7 +25,7 @@ class CarsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cars)
 
-        val carreraId = intent.getStringExtra(MainActivity.EXTRA_CARRERA_ID)
+        val carreraId = intent.getStringExtra(MainActivity.EXTRA_CARRERA_ID) ?: intent.getStringExtra("race_id")
 
         val addVehicleButton = findViewById<Button>(R.id.addVehicleButton)
         addVehicleButton.setOnClickListener {
@@ -52,7 +52,7 @@ class CarsActivity : AppCompatActivity() {
     }
     override fun onResume() {
         super.onResume()
-        val carreraId = intent.getStringExtra(MainActivity.EXTRA_CARRERA_ID)
+        val carreraId = intent.getStringExtra(MainActivity.EXTRA_CARRERA_ID)?: intent.getStringExtra("race_id")
         // Llamar al método para obtener la información de la carrera de la API
         // Esto se ejecutará cuando la actividad retome el foco después de regresar de otra actividad
         getCarreraFromApi(carreraId.toString())
