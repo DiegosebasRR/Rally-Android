@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Rally-app</string>
+    <string name="round_button">Iniciar Carrera</string>
+    <string name="welcome">Rally App Bienvenido</string>
+    <string name="txt_name">Carrera</string>
+    <string name="input_name">Ingresa nombre de Carrera</string>
+    <string name="txt_category">Category</string>
+    <string name="input_category">Ingresa cantidad de categorias</string>
+</resources>

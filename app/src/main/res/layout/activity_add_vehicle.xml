@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddVehicleActivity"
+    android:background="@color/background_grey">
+
+    <EditText
+        android:id="@+id/vehicleNumberEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Número del vehículo"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        />
+
+    <EditText
+        android:id="@+id/pilotNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Nombre del piloto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vehicleNumberEditText"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        />
+
+    <EditText
+        android:id="@+id/plateNumberEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Placa del vehículo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pilotNameEditText"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        />
+
+    <!-- Agrega los EditTexts para los demás campos del data class Car aquí -->
+    <EditText
+        android:id="@+id/dniPilotoEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="DNI del piloto"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plateNumberEditText"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        />
+
+    <EditText
+        android:id="@+id/coPilotEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Nombre del coPiloto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dniPilotoEditText"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        />
+
+    <EditText
+        android:id="@+id/dniCoPilotoEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="DNI del coPiloto"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coPilotEditText"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        />
+
+    <EditText
+        android:id="@+id/categoriaEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Categoría"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dniCoPilotoEditText"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        />
+
+    <EditText
+        android:id="@+id/imagenUrlEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="URL de la imagen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoriaEditText"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        app:layout_constraintTop_toBottomOf="@id/imagenUrlEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:onClick="onSaveButtonClicked"
+        android:background="@color/accent_red"
+        />
+    <ImageView
+        android:id="@+id/photoImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/imagenUrlEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/takePhotoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomar Foto"
+        app:layout_constraintTop_toBottomOf="@id/photoImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:background="@color/accent_red"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

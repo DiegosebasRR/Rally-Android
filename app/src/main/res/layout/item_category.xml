@@ -1,0 +1,32 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Nombre del Categoria -->
+    <TextView
+        android:id="@+id/txtCategory"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre de Categoria"
+        android:textSize="16sp"/>
+
+    <!-- Botón de Salida -->
+    <Button
+        android:id="@+id/btnSalida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salida"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Botón de Llegada -->
+    <Button
+        android:id="@+id/btnLlegada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Llegada"
+        android:layout_marginStart="8dp"/>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/rounded_rectangle_white">
+
+    <!-- Nombre del vehículo -->
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/black" />
+
+    <!-- Nombre del piloto -->
+    <TextView
+        android:id="@+id/txtPilot"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Piloto"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <!-- placa de vehiculo -->
+    <TextView
+        android:id="@+id/txtPlate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="FTE-850"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+</LinearLayout>

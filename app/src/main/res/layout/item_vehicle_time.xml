@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Nombre del vehículo -->
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Placa de vehiculo -->
+    <TextView
+        android:id="@+id/txtPlate"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="FTE-850"
+        android:textSize="16sp"/>
+
+    <!-- Hora del vehículo -->
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:30 AM"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Botón de salida -->
+    <Button
+        android:id="@+id/btnDeparture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grabar"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Botón de llegada -->
+    <Button
+        android:id="@+id/btnArrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subir"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"/>
+
+</LinearLayout>
